@@ -1,0 +1,8 @@
+list(APPEND
+    TANKLIB_SOURCE_FILES
+)
+
+list(APPEND
+    TANKLIB_INCLUDE_DIR
+    ${TANKLIB_SRC_DIR}/app
+)
