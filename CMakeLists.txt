@@ -25,5 +25,5 @@ elseif(MINGW)
 endif()
 
 add_subdirectory(${COMMONLIB_SRC_DIR} ${COMMONLIB_BUILD_DIR})
-#add_subdirectory(${TANKLIB_SRC_DIR} ${TANKLIB_BUILD_DIR})
+add_subdirectory(${TANKLIB_SRC_DIR} ${TANKLIB_BUILD_DIR})
 add_subdirectory(app)

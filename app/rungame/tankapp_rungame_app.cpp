@@ -1,8 +1,10 @@
 #include <commonlib_log.h>
 #include <commonlib_exception.h>
+#include <tanklib_app_config.h>
 #include <tankapp_rungame_app.h>
 
 using namespace mcdane::commonlib;
+using namespace mcdane::tanklib;
 
 namespace mcdane {
 namespace tankapp {
@@ -11,7 +13,9 @@ void RunGameApp::init(const std::string &configFile,
                       const std::string &appDir,
                       const std::string &mapFile)
 {
-    App::init(1000, 800, "Tank battle");
+    AppConfig::init(configFile, appDir);
+    auto &cfg = AppConfig::instance();
+    App::init(cfg.width_, cfg.height_, cfg.title_);
 }
 
 void RunGameApp::process()
