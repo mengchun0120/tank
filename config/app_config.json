@@ -3,5 +3,20 @@
         "width": 1000,
         "height": 800,
         "title": "Tank"
+    },
+    "directories": {
+        "fontDir": ["res", "fonts"],
+        "picDir": ["res", "pics"],
+        "glslDir": ["res", "glsl"],
+        "libDir": ["res", "libs"],
+        "configDir": ["config"],
+        "mapDir": ["res", "maps"]
+    },
+    "shaders": {
+        "simpleVertexShaderFiles": ["simple_vertex_shader.glsl"],
+        "simpleFragShaderFiles": [
+            "simple_frag_shader.glsl",
+            "simple_frag_shader_v2.glsl"
+        ]
     }
 }

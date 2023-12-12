@@ -1,6 +1,7 @@
 #include <commonlib_log.h>
 #include <commonlib_exception.h>
 #include <tanklib_app_config.h>
+#include <tanklib_context.h>
 #include <tankapp_rungame_app.h>
 
 using namespace mcdane::commonlib;
@@ -16,6 +17,7 @@ void RunGameApp::init(const std::string &configFile,
     AppConfig::init(configFile, appDir);
     auto &cfg = AppConfig::instance();
     App::init(cfg.width_, cfg.height_, cfg.title_);
+    Context::init(cfg);
 }
 
 void RunGameApp::process()

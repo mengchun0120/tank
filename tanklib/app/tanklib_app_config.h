@@ -2,6 +2,7 @@
 #define INCLUDED_TANKLIB_APP_CONFIG_H
 
 #include <string>
+#include <vector>
 #include <rapidjson/document.h>
 
 namespace mcdane {
@@ -20,6 +21,11 @@ private:
 
     void loadBasics(const rapidjson::Document &doc);
 
+    void loadDirectories(const rapidjson::Document &doc,
+                         const std::string &appDir);
+
+    void loadShaderFiles(const rapidjson::Document &doc);
+
 private:
     static std::shared_ptr<AppConfig> k_instance;
 
@@ -28,6 +34,14 @@ public:
     unsigned int width_;
     unsigned int height_;
     std::string title_;
+    std::string fontDir_;
+    std::string picDir_;
+    std::string glslDir_;
+    std::string configDir_;
+    std::string libDir_;
+    std::string mapDir_;
+    std::vector<std::string> simpleVertexShaderFiles_;
+    std::vector<std::string> simpleFragShaderFiles_;
 };
 
 const AppConfig &AppConfig::instance()
