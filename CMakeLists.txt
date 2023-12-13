@@ -12,8 +12,6 @@ set(COMMONLIB_BUILD_DIR ${BUILD_DIR}/commonlib)
 set(TANKLIB_SRC_DIR ${CMAKE_SOURCE_DIR}/tanklib)
 set(TANKLIB_BUILD_DIR ${BUILD_DIR}/tanklib)
 
-set(APP_BUILD_DIR ${BUILD_DIR}/app)
-
 add_definitions(${CPP_COMPILE_FLAG})
 
 if(UNIX)
@@ -26,4 +24,5 @@ endif()
 
 add_subdirectory(${COMMONLIB_SRC_DIR} ${COMMONLIB_BUILD_DIR})
 add_subdirectory(${TANKLIB_SRC_DIR} ${TANKLIB_BUILD_DIR})
+add_subdirectory(tests)
 add_subdirectory(app)

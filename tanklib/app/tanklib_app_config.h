@@ -42,6 +42,8 @@ public:
     std::string mapDir_;
     std::vector<std::string> simpleVertexShaderFiles_;
     std::vector<std::string> simpleFragShaderFiles_;
+    std::vector<std::string> particleVertexShaderFiles_;
+    std::vector<std::string> particleFragShaderFiles_;
 };
 
 const AppConfig &AppConfig::instance()

@@ -9,6 +9,9 @@ void Graphics::init(const AppConfig &cfg)
 {
     simpleShader_.init(cfg.simpleVertexShaderFiles_,
                        cfg.simpleFragShaderFiles_);
+    particleShader_.init(cfg.particleVertexShaderFiles_,
+                         cfg.particleFragShaderFiles_);
+    textSys_.init(cfg.fontDir_);
 
     LOG_INFO << "Graphics created successfully" << LOG_END;
 }
