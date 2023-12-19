@@ -5,9 +5,14 @@ list(APPEND
 
 list(APPEND
     TANKLIB_GAMEOBJ_SRC
+    gameobj/tanklib_component.cpp
+    gameobj/tanklib_component_type.cpp
     gameobj/tanklib_game_object_template.cpp
-    gameobj/tanklib_game_object_type.cpp
     gameobj/tanklib_particle_effect_template.cpp
+    gameobj/tanklib_component_template.cpp
+    gameobj/tanklib_composite_object_template.cpp
+    gameobj/tanklib_game_object_type.cpp
+    gameobj/tanklib_tile_template.cpp
 )
 
 list(APPEND
