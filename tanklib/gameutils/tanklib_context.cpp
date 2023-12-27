@@ -18,6 +18,7 @@ void Context::init(const AppConfig &cfg)
 Context::Context(const AppConfig &cfg)
 {
     graphics_.init(cfg);
+    gameLib_.init(cfg);
 
     LOG_INFO << "Context initialized successfully" << LOG_END;
 }

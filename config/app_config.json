@@ -23,5 +23,14 @@
             "particle_frag_shader.glsl",
             "particle_frag_shader_v2.glsl"
         ]
+    },
+    "libraries": {
+        "textureLibFile": "texture_lib.json",
+        "rectLibFile": "rect_lib.json",
+        "iconTemplateLibFile": "icon_template_lib.json",
+        "componentTemplateLibFile": "component_template_lib.json",
+        "tileTemplateLibFile": "tile_template_lib.json",
+        "particleEffectTemplateLibFile": "particle_effect_template_lib.json",
+        "particleEffectDataDir": "particle_effect_data"
     }
 }

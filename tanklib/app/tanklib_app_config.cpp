@@ -46,6 +46,7 @@ AppConfig::AppConfig(const rapidjson::Document &doc,
     loadBasics(doc);
     loadDirectories(doc, appDir);
     loadShaderFiles(doc);
+    loadLibFiles(doc);
 
     LOG_INFO << "AppConfig initialized successfully" << LOG_END;
 }
@@ -120,6 +121,39 @@ void AppConfig::loadShaderFiles(const rapidjson::Document &doc)
     marshalFileNames(particleFragShaderFiles_,
                      particleFragShaderFiles1,
                      glslDir_);
+}
+
+void AppConfig::loadLibFiles(const rapidjson::Document &doc)
+{
+    std::vector<JsonParamPtr> params{
+        jsonParam(textureLibFile_, {"libraries", "textureLibFile"},
+                  true, k_nonEmptyStrV),
+        jsonParam(rectLibFile_, {"libraries", "rectLibFile"},
+                  true, k_nonEmptyStrV),
+        jsonParam(iconTemplateLibFile_, {"libraries", "iconTemplateLibFile"},
+                  true, k_nonEmptyStrV),
+        jsonParam(componentTemplateLibFile_,
+                  {"libraries", "componentTemplateLibFile"},
+                  true, k_nonEmptyStrV),
+        jsonParam(tileTemplateLibFile_, {"libraries", "tileTemplateLibFile"},
+                  true, k_nonEmptyStrV),
+        jsonParam(particleEffectTemplateLibFile_,
+                  {"libraries", "particleEffectTemplateLibFile"},
+                  true, k_nonEmptyStrV),
+        jsonParam(particleEffectDataDir_, {"libraries", "particleEffectDataDir"},
+                  true, k_nonEmptyStrV),
+    };
+
+    parse(params, doc);
+
+    textureLibFile_ = constructPath({libDir_, textureLibFile_});
+    rectLibFile_ = constructPath({libDir_, rectLibFile_});
+    iconTemplateLibFile_ = constructPath({libDir_, iconTemplateLibFile_});
+    componentTemplateLibFile_ = constructPath({libDir_, componentTemplateLibFile_});
+    tileTemplateLibFile_ = constructPath({libDir_, tileTemplateLibFile_});
+    particleEffectTemplateLibFile_ = constructPath(
+                                     {libDir_, particleEffectTemplateLibFile_});
+    particleEffectDataDir_ = constructPath({libDir_, particleEffectDataDir_});
 }
 
 } // end of namespace tanklib

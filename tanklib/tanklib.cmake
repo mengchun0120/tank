@@ -8,6 +8,7 @@ list(APPEND
     gameobj/tanklib_component.cpp
     gameobj/tanklib_component_type.cpp
     gameobj/tanklib_game_object_template.cpp
+    gameobj/tanklib_icon_template.cpp
     gameobj/tanklib_particle_effect_template.cpp
     gameobj/tanklib_component_template.cpp
     gameobj/tanklib_composite_object_template.cpp
@@ -18,6 +19,7 @@ list(APPEND
 list(APPEND
     TANKLIB_GAMEUTILS_SRC
     gameutils/tanklib_context.cpp
+    gameutils/tanklib_game_lib.cpp
 )
 
 list(APPEND

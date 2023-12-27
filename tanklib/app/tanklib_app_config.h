@@ -26,6 +26,8 @@ private:
 
     void loadShaderFiles(const rapidjson::Document &doc);
 
+    void loadLibFiles(const rapidjson::Document &doc);
+
 private:
     static std::shared_ptr<AppConfig> k_instance;
 
@@ -44,6 +46,13 @@ public:
     std::vector<std::string> simpleFragShaderFiles_;
     std::vector<std::string> particleVertexShaderFiles_;
     std::vector<std::string> particleFragShaderFiles_;
+    std::string textureLibFile_;
+    std::string rectLibFile_;
+    std::string iconTemplateLibFile_;
+    std::string componentTemplateLibFile_;
+    std::string tileTemplateLibFile_;
+    std::string particleEffectTemplateLibFile_;
+    std::string particleEffectDataDir_;
 };
 
 const AppConfig &AppConfig::instance()

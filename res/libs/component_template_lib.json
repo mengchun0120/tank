@@ -1,0 +1,22 @@
+{
+    "steel_tile": {
+        "type": "tile",
+        "icon": "steel_tile"
+    },
+    "ice_tile": {
+        "type": "tile",
+        "icon": "ice_tile"
+    },
+    "clay_tile": {
+        "type": "tile",
+        "icon": "clay_tile"
+    },
+    "fireland_tile": {
+        "type": "tile",
+        "icon": "fireland_tile"
+    },
+    "bush_tile": {
+        "type": "tile",
+        "icon": "bush_tile"
+    }
+}
